@@ -16,7 +16,7 @@ public class WelcomeMessage extends SimpleTagSupport {
         JspWriter out = getJspContext().getOut();
         LocalTime noon = LocalTime.of(12,00,00);
         LocalTime quittinTime = LocalTime.of(17,00,00);
-        LocalDate springBreak = LocalDate.of(2018,03,09);
+        LocalDate springBreak = LocalDate.of(2018,03,9);
        // LocalDate springBreak = LocalDate.of(2018,01,30);
 
         LocalTime time = LocalTime.now();
