@@ -4,15 +4,34 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
 import java.io.IOException;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.LocalTime;
 
 public class WelcomeMessage extends SimpleTagSupport {
+
     @Override
     public void doTag() throws JspException, IOException {
         super.doTag();
         JspWriter out = getJspContext().getOut();
-        LocalDateTime time = LocalDateTime.now();
+        LocalTime noon = LocalTime.of(12,00,00);
+        LocalTime quittinTime = LocalTime.of(17,00,00);
+        LocalDate springBreak = LocalDate.of(2018,03,09);
+       // LocalDate springBreak = LocalDate.of(2018,01,30);
 
-        out.println(time);
+        LocalTime time = LocalTime.now();
+        LocalDate date = LocalDate.now();
+
+        if (date.isEqual(springBreak)) {
+            out.println("TIME DOESN'T MATTER IT'S SPRING BREAK!");
+        } else if (time.isBefore(noon)) {
+            out.println("GOOD MORNING SUNSHINE!");
+        } else if (time.isBefore(quittinTime)) {
+            out.println("Good afternoon!");
+        } else if (time.isAfter(quittinTime)) {
+            out.println("Good evening!");
+        }
+
+
     }
 }

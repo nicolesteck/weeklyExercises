@@ -8,7 +8,7 @@
     <tag>
         <name>TagLib</name>
         <tag-class>edu.matc.entjava.wk3ex1.WelcomeMessage</tag-class>
-        <body-content>empty</body>
+        <body-content>empty</body-content>
     </tag>
 
 </taglib>
