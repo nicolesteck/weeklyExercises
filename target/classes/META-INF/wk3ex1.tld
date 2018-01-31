@@ -1,0 +1,14 @@
+<taglib>
+
+    <tlib-version>1.0</tlib-version>
+    <jsp-version>2.0</jsp-version>
+    <short-name>wk3ex1tld</short-name>
+    <uri>http://matc.edu/wk3ex1</uri>
+
+    <tag>
+        <name>TagLib</name>
+        <tag-class>edu.matc.entjava.wk3ex1.WelcomeMessage</tag-class>
+        <body-content>empty</body>
+    </tag>
+
+</taglib>
